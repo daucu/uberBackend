@@ -18,16 +18,20 @@ const trip_schema = new mongoose.Schema({
     reqired: true,
   },
 
-  start_location_id: {
+  location: {
     type: mongoose.Types.ObjectId,
     ref: "locations",
-    reqired: true,
   },
-  end_location_id: {
-    type: mongoose.Types.ObjectId,
-    ref: "locations",
-    reqired: true,
-  },
+  // start_location_id: {
+  //   type: mongoose.Types.ObjectId,
+  //   ref: "locations",
+  //   reqired: true,
+  // },
+  // end_location_id: {
+  //   type: mongoose.Types.ObjectId,
+  //   ref: "locations",
+  //   reqired: true,
+  // },
   //  get the current timestamp for start time
   trip_start_time: {
     type: Date,
@@ -35,6 +39,7 @@ const trip_schema = new mongoose.Schema({
   },
   //  get the current timestamp for end time
   trip_end_time: {
+    // set time + 1 hour from start time
     type: Date,
     default: Date.now,
   },

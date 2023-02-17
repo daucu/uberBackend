@@ -31,6 +31,16 @@ const location_schema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "users",
   },
+
+  // some other fields for destination
+  destination_longitude: {
+    type: Number,
+    reqired: true,
+  },
+  destination_latitude: {
+    type: Number,
+    reqired: true,
+  },
 });
 
 module.exports = mongoose.model("locations", location_schema);

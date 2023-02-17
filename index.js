@@ -52,6 +52,8 @@ app.use("/api/driver", require("./routes/driver_register"));
 app.use("/api/cars", require("./routes/car_reg"));
 
 app.use("/api/location", require("./routes/location"));
+
+app.use("/api/trip", require("./routes/Trip"));
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
 });
