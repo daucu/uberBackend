@@ -32,10 +32,10 @@ app.use(
 const connectDB = require("./config/database");
 connectDB();
 
-app.use("/api/getuser", require("./routes/user_register"));
+app.use("/api/getuser", require("./routes/register"));
 
 // singup API
-app.use("/api/signup", require("./routes/user_register"));
+app.use("/api/signup", require("./routes/register"));
 
 // login api
 app.use("/api/login", require("./routes/login"));
@@ -46,7 +46,9 @@ app.use("/api/logout", require("./routes/logout"));
 // Profile req and res
 app.use("/api/profile", require("./Profile/Userprofile"));
 
- 
+app.use("/api/driver", require("./routes/driver_register"));
+
+app.use("/api/cars", require("./routes/car_reg"));
 
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
