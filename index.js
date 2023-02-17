@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
 const multer = require("multer");
@@ -50,6 +51,7 @@ app.use("/api/driver", require("./routes/driver_register"));
 
 app.use("/api/cars", require("./routes/car_reg"));
 
+app.use("/api/location", require("./routes/location"));
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
 });
