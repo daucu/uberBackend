@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Location_Schema = require("../models/Location_Schema");
+const Location_Schema = require("../models/Location_schema");
 const JWT = require("jsonwebtoken");
 
 // code to get location data from database
