@@ -35,7 +35,7 @@ connectDB();
 
 app.use("/api/getuser", require("./routes/register"));
 
-// singup API
+// singup API  -----
 app.use("/api/signup", require("./routes/register"));
 
 // login api
@@ -51,7 +51,7 @@ app.use("/api/driver", require("./routes/driver_register"));
 
 app.use("/api/cars", require("./routes/car_reg"));
 
-app.use("/api/location",require("./routes/location"))
+app.use("/api/location", require("./routes/location"));
 app.use("/api/trip", require("./routes/Trip"));
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
